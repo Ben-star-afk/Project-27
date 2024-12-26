@@ -1,0 +1,31 @@
+<html>
+</html>
+<body>
+    <p id="details"></p>
+    <p id="details1"></p>
+    <script>
+        class ss {
+            constructor(galaxy) {
+                this.mygalaxy = galaxy;
+            }
+            present() {
+                return "We live in the " + this.mygalaxy;
+            }
+        }
+        class model extends ss {
+            constructor(galaxy, mod) {
+                super(galaxy);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ", on " + this.model;
+            }
+            static   master() {
+                return "We have Mercury, Venus, Earth, Mars, Jupiter, Uranus, Neptune, Pluto";
+            }
+        }
+        let mycar = new model("milky way galaxy", "Earth");
+        document.getElementById("details").innerHTML = mycar.show();
+         document.getElementById("details1").innerHTML = model.master();
+    </script>
+</body>
